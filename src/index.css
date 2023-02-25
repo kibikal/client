@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+        font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.App {
+    width: 90%;
+    margin: auto;
+}
+
+.logo-heading {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-heading img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo-heading h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid green;
+}
+
+
+
+@media (min-width: 768px){
+.App {
+        width: 70%;
+        margin: auto;
+    }
+
+        .logo-heading {
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-heading img {
+            width: 130px;
+            height: 130px;
+        }
+
+    
+        .logo-heading h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
 }
